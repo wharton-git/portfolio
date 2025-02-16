@@ -1,0 +1,15 @@
+const Navbar = () => {
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <nav className="fixed top-0 w-full bg-gray-800 text-white p-4 flex justify-center gap-4">
+      <button onClick={() => scrollToSection("home")}>Home</button>
+      <button onClick={() => scrollToSection("competence")}>Compétences</button>
+      <button onClick={() => scrollToSection("contact")}>Contact</button>
+    </nav>
+  );
+};
+
+export default Navbar;
