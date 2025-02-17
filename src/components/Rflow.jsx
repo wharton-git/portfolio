@@ -25,9 +25,9 @@ import TailwindLogo from './../assets/icons/tailwind.png'
 import DBLogo from './../assets/icons/database.png'
 import SQLLogo from './../assets/icons/sql.png'
 import SQLiteLogo from './../assets/icons/sqlite.png'
-import MysqlLogo from './../assets/icons/mysql.png'
+import MysqlLogo from './../assets/icons/Mysql.png'
 import PostgreLogo from './../assets/icons/postgre.png'
-import LaravelLogo from './../assets/icons/laravel.png'
+import LaravelLogo from './../assets/icons/Laravel.png'
 
 const nodeTypes = { custom: CircleNode };
 
