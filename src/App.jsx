@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 import Projets from "./components/Projets";
 import blackWave from "./assets/svg/black_wave.svg";
 import whiteWave from "./assets/svg/white_wave.svg";
-import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Test from "./components/Test";
 
 const App = () => {
