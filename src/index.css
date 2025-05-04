@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "JetBrainsMono";
+    src: url("./fonts/JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight: 400, 500, 700;
+    font-style: normal;
+}
+
+body {
+    font-family: "JetBrainsMono", sans-serif;
+}
+@layer base {
+    @apply bg-gray-900 text-gray-200;
+}
+@layer components {
+    @apply text-gray-200;
+}
+@layer utilities {
+    @apply bg-gray-900 text-gray-200;
+}
