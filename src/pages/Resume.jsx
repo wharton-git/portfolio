@@ -43,9 +43,9 @@ const Resume = () => {
             transition={{ duration: 0.5 }}
             className='sm:flex sm:w-9/12 sm:px-0 mx-auto px-7 sm:mt-10 gap-2'
         >
-            <div className='sm:w-max'>
+            <div className='sm:w-2/6 sm:mr-10'>
                 <h1 className='text-xl font-bold'>Why Hire Me ?</h1>
-                <p className='text-gray-400 sm:my-4 my-2 text-sm'>Web developers turn ideas into functional, user-friendly websites.</p>
+                <p className='text-gray-400 sm:my-4 my-2 text-sm text-justify'>Web developers turn ideas into functional, user-friendly websites.</p>
                 <div className='sm:flex sm:flex-col sm:text-lg sm:gap-2 sm:w-full sm:my-0 my-3 gap-3 w-max mx-auto grid grid-cols-2 text-sm'>
                     {['experiences', 'educations', 'skills', 'about'].map((section) => (
                         <button
