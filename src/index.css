@@ -54,3 +54,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #04c062; 
 }
+
+.lsp {
+    letter-spacing: 8px;
+}

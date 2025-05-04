@@ -2,17 +2,17 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react'; // ou tout autre icône, ex: Heroicons
+import { Contact, FolderKanban, Home, Info, Menu, X } from 'lucide-react'; // ou tout autre icône, ex: Heroicons
 
 const Navbar = () => {
     const location = useLocation();
     const currentPath = location.pathname;
 
     const links = [
-        { name: 'Home', path: '/' },
-        { name: 'Resume', path: '/resume' },
-        { name: 'Work', path: '/work' },
-        { name: 'Contact', path: '/contact' },
+        { name: 'Home', path: '/', icon: <Home size={22} /> },
+        { name: 'Resume', path: '/resume', icon: <Info size={22} /> },
+        { name: 'Work', path: '/work', icon: <FolderKanban size={22} /> },
+        { name: 'Contact', path: '/contact', icon: <Contact size={22} /> },
     ];
 
     const containerRef = useRef(null);
@@ -29,7 +29,7 @@ const Navbar = () => {
     }, [currentPath]);
 
     useEffect(() => {
-        setMobileOpen(false); 
+        setMobileOpen(false);
     }, [currentPath]);
 
     return (
@@ -45,10 +45,11 @@ const Navbar = () => {
                         key={link.path}
                         to={link.path}
                         data-path={link.path}
-                        className={`transition-all text-sm relative ${currentPath === link.path ? 'text-green-400' : 'text-white'
+                        className={`transition-all text-sm relative flex items- gap-2 pb-3 ${currentPath === link.path ? 'text-green-400' : 'text-white'
                             }`}
                     >
-                        {link.name}
+                        <span>{link.icon}</span>
+                        <span>{link.name}</span>
                     </Link>
                 ))}
                 <motion.div
@@ -87,19 +88,28 @@ const Navbar = () => {
                             animate={{ x: 0 }}
                             exit={{ x: '100%' }}
                             transition={{ type: 'tween', duration: 0.3 }}
-                            className="fixed top-0 right-0 w-3/4 h-full bg-gray-900 shadow-lg p-6 flex flex-col gap-4 sm:hidden z-50"
+                            className="fixed top-0 right-0 w-3/4 h-full bg-gray-900 shadow-lg p-6 flex flex-col justify-center sm:hidden z-50"
                         >
-                            {links.map(link => (
-                                <Link
-                                    key={link.path}
-                                    to={link.path}
-                                    data-path={link.path}
-                                    className={`text-lg font-medium ${currentPath === link.path ? 'text-green-400' : 'text-white'
-                                        }`}
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
+                            <div className='absolute top-10'>
+                                <h1 className='text-xl font-bold text-green-400'>Wharton <br />
+                                    <span className='m-0 lsp'>Aldrick</span>
+                                    <span className='text-white'>.</span>
+                                </h1>
+                            </div>
+                            <div>
+                                {links.map(link => (
+                                    <Link
+                                        key={link.path}
+                                        to={link.path}
+                                        data-path={link.path}
+                                        className={`text-lg font-medium flex gap-4 py-3 items-center ${currentPath === link.path ? 'text-green-400' : 'text-white'
+                                            }`}
+                                    >
+                                        <span>{link.icon}</span>
+                                        <span>{link.name}</span>
+                                    </Link>
+                                ))}
+                            </div>
                         </motion.div>
                     </>
                 )}
