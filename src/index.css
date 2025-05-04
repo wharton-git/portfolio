@@ -39,8 +39,13 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
     height: 8px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -49,6 +54,11 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: var(--green); 
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
