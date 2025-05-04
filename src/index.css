@@ -1,21 +1,56 @@
 @import "tailwindcss";
 
+/* Déclaration de la font JetBrainsMono */
 @font-face {
     font-family: "JetBrainsMono";
     src: url("./fonts/JetBrainsMono-Regular.ttf") format("truetype");
-    font-weight: 400, 500, 700;
+    font-weight: 400;
     font-style: normal;
 }
 
 body {
     font-family: "JetBrainsMono", sans-serif;
 }
+
+:root {
+    --green: #05df72;
+}
+
 @layer base {
-    @apply bg-gray-900 text-gray-200;
+    body {
+        @apply bg-gray-900 text-gray-200;
+    }
 }
+
 @layer components {
-    @apply text-gray-200;
+    .custom-text {
+        @apply text-gray-200;
+    }
 }
+
 @layer utilities {
-    @apply bg-gray-900 text-gray-200;
+    .bg-dark {
+        @apply bg-gray-900 text-gray-200;
+    }
+    .bg-light {
+        @apply bg-gray-200 text-gray-900;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a202c; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--green); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #04c062; 
 }

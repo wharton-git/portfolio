@@ -32,7 +32,7 @@ const App = () => {
   const location = useLocation();
 
   return (
-    <div className='dark:bg-gray-900 dark:text-white bg-white text-black min-h-screen'>
+    <div className='dark:bg-gray-900 dark:text-white bg-white text-black min-h-screen max-h-max'>
       <Navbar location={location.pathname}/>
       <AnimatedRoutes />
     </div>
