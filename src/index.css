@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@layer components {
+  .neu-protrude {
+    @apply rounded-lg bg-[#e0e0e0] p-1;
+    box-shadow: 6px 6px 10px #bebebe, -6px -6px 10px #ffffff;
+  }
+
+  .dark\:neu-protrude {
+    &:where([data-theme=dark], [data-theme=dark] *) {
+      @apply bg-[#1e1e1e] text-white;
+      box-shadow: 6px 6px 10px #141414, -6px -6px 10px #1d1d1d;
+    }
+
+  }
+
+  .neu-dent {
+    @apply rounded-lg bg-[#e0e0e0] p-1;
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+  }
+
+  .dark\:neu-dent {
+    &:where([data-theme=dark], [data-theme=dark] *) {
+      @apply bg-[#1e1e1e] text-white;
+      box-shadow: inset 4px 4px 8px #141414, inset -4px -4px 8px #1d1d1d;
+    }
+
+  }
+}
