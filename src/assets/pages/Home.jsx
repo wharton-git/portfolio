@@ -12,7 +12,7 @@ const Home = () => {
                 <div className='flex flex-col gap-4'>
                     <div className='flex items-center gap-4'>
                         <div className='neu-protrude dark:neu-protrude w-max h-25 text-6xl p-5 font-extrabold'>
-                            WA
+                            <span className='title dark:title-dark'>WA</span>
                         </div>
                         <div className='w-full h-25 text-2xl p-5 flex items-center'>
                             My name is Wharton Aldrick

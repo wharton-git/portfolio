@@ -3,28 +3,45 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @layer components {
+
+  .title {
+    color: transparent;
+    background: rgb(15, 182, 0);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+  }
+
+  .dark\:title-dark {
+    &:where([data-theme=dark], [data-theme=dark] *) {
+      color: #60ff52;
+      text-shadow: 0px 0px 5px #4cff3cee, 0px 0px 10px #3fff2ed2, 0px 0px 15px #3fff2e9d;
+    }
+  }
+
   .neu-protrude {
     @apply rounded-lg bg-[#e0e0e0] p-1;
-    box-shadow: 6px 6px 10px #bebebe, -6px -6px 10px #ffffff;
+    box-shadow: 3px 3px 3px #bebebe, -2px -2px 2px #ffffff;
   }
 
   .dark\:neu-protrude {
     &:where([data-theme=dark], [data-theme=dark] *) {
-      @apply bg-[#1e1e1e] text-white;
-      box-shadow: 6px 6px 10px #141414, -6px -6px 10px #1d1d1d;
+      @apply bg-[#1e1e1e];
+      box-shadow: 3px 3px 3px #141414, -2px -2px 2px #2c2c2c;
     }
 
   }
 
   .neu-dent {
     @apply rounded-lg bg-[#e0e0e0] p-1;
-    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    box-shadow: inset 3px 3px 3px #bebebe, inset -2px -2px 2px #ffffff;
   }
 
   .dark\:neu-dent {
     &:where([data-theme=dark], [data-theme=dark] *) {
-      @apply bg-[#1e1e1e] text-white;
-      box-shadow: inset 4px 4px 8px #141414, inset -4px -4px 8px #1d1d1d;
+      @apply bg-[#1e1e1e];
+      box-shadow: inset 3px 3px 3px #141414, inset -2px -2px 2px #2c2c2c;
     }
 
   }
