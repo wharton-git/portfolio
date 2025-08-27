@@ -8,19 +8,19 @@ import { Phone } from 'lucide-react'
 const Home = () => {
     return (
         <Box>
-            <div className="w-full h-full grid md:grid-cols-2 items-center justify-center">
-                <div className='flex flex-col gap-4'>
+            <div className="w-full h-full md:flex grid items-center justify-center">
+                <div className='flex flex-col gap-4 w-3/2'>
                     <div className='flex items-center gap-4'>
                         <div className='neu-protrude dark:neu-protrude w-max h-25 text-6xl p-5 font-extrabold'>
                             <span className='title dark:title-dark'>WA</span>
                         </div>
-                        <div className='w-full h-25 text-2xl p-5 flex items-center'>
-                            My name is Wharton Aldrick
-                        </div>
-                    </div>
-                    <div className='flex items-center'>
-                        <div className='w-full h-15 text-xl flex items-center justify-center'>
-                            Developer Full Stack | Network Engineer
+                        <div className='flex flex-col gap-2 w-full'>
+                            <div className='w-full text-2xl p-5 flex items-center flex justify-center'>
+                                My name is Wharton Aldrick
+                            </div>
+                            <div className='w-full text-sm flex items-center mb-5 justify-center'>
+                                Developer Full Stack | Network Engineer
+                            </div>
                         </div>
                     </div>
                     <div className='flex items-center gap-4'>
@@ -31,10 +31,10 @@ const Home = () => {
                     </div>
                     <div className='flex items-center gap-4'>
                         <div className='neu-protrude dark:neu-protrude p-2 flex items-center gap-2 text-sm'>
-                            <AtSign/><span>whartonaldrick@gmail.com</span>
+                            <AtSign /><span>whartonaldrick@gmail.com</span>
                         </div>
-                        <div className='neu-protrude dark:neu-protrude p-2 flex items-center gap-2 text-sm'>
-                            <Phone/><span>+261 38 57 390 44 | +261 37 49 838 79</span>
+                        <div className='neu-protrude dark:neu-protrude p-2 w-full flex items-center gap-2 text-[90%]'>
+                            <Phone /><span>+261 38 57 390 44 | +261 37 49 838 79</span>
                         </div>
                     </div>
                 </div>
