@@ -15,7 +15,7 @@ const Home = () => {
                             <span className='title dark:title-dark'>WA</span>
                         </div>
                         <div className='flex flex-col gap-2 w-full'>
-                            <div className='w-full text-2xl p-5 flex items-center flex justify-center'>
+                            <div className='w-full text-2xl p-5 flex items-center justify-center'>
                                 My name is Wharton Aldrick
                             </div>
                             <div className='w-full text-sm flex items-center mb-5 justify-center'>
