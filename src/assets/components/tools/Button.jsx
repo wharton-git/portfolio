@@ -1,10 +1,10 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Button = ({ children, className }) => {
     return (
-        <div className={`neu-protrude dark:neu-protrude w-max cursor-pointer ` + className}>
+        <Link to="/contacts" className={`neu-protrude dark:neu-protrude w-max p-2 cursor-pointer ` + className}>
             {children}
-        </div>
+        </Link>
     )
 }
 
